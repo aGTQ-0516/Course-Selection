@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>登录 - 大学生选课系统</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__text">
+        <h1>大学生选课平台</h1>
+        <p></p>
+        <nav class="hero__nav">
+          <a href="login.html">登录</a>
+          <a href="register.html">注册</a>
+          <a href="index.html">我的选课</a>
+        </nav>
+      </div>
+      <div class="hero__status">
+        <p id="status-text">未登录</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" id="auth-section">
+        <h2>登录</h2>
+        <form id="sign-in-form" class="single-form">
+          <label>
+            邮箱
+            <input type="email" name="email" placeholder="example@university.edu" required />
+          </label>
+          <label>
+            密码
+            <input type="password" name="password" required />
+          </label>
+          <button type="submit">登录</button>
+          <p class="tip">
+            还没有账号？
+            <a href="register.html">去注册</a>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <small>Supabase Demo · 请在 <code>assets/config.js</code> 中配置自己的项目参数。</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/config.js"></script>
+    <script src="assets/auth.js"></script>
+  </body>
+</html>
+
+

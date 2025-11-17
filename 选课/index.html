@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>大学生选课系统</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__text">
+        <h1>大学生选课平台</h1>
+        <p></p>
+        <nav class="hero__nav">
+          <button type="button" class="nav-toggle active" data-view="courses">可选课程</button>
+          <button type="button" class="nav-toggle" data-view="enrollments">我的课表</button>
+        </nav>
+      </div>
+      <div class="hero__status">
+        <p id="status-text">未登录</p>
+        <button id="sign-out-btn" class="ghost" hidden>退出登录</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" id="course-section" hidden>
+        <div class="card__header">
+          <h2>可选课程</h2>
+          <div class="filters">
+            <input type="search" id="course-search" placeholder="搜索课程或教师" />
+            <select id="credit-filter">
+              <option value="all">全部学分</option>
+              <option value="2">2 学分</option>
+              <option value="3">3 学分</option>
+              <option value="4">4 学分</option>
+            </select>
+          </div>
+        </div>
+        <div id="course-list" class="course-list"></div>
+      </section>
+
+      <section class="card" id="enrollment-section" hidden>
+        <h2>我的课表</h2>
+        <ul id="enrollment-list" class="enrollment-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>Supabase Demo · 请在 <code>assets/config.js</code> 中配置自己的项目参数。</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/config.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
+

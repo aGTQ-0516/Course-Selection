@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>登录 / 注册 - 大学生选课系统</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__text">
+        <h1>大学生选课平台</h1>
+        <p></p>
+        <nav class="hero__nav">
+          <a href="auth.html">注册 / 登录</a>
+          <a href="index.html">我的选课</a>
+        </nav>
+      </div>
+      <div class="hero__status">
+        <p id="status-text">未登录</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" id="auth-section">
+        <h2>注册 / 登录</h2>
+        <div class="grid">
+          <form id="sign-up-form">
+            <h3>创建账号</h3>
+            <label>
+              姓名
+              <input type="text" name="fullName" placeholder="王小明" required />
+            </label>
+            <label>
+              邮箱
+              <input type="email" name="email" placeholder="example@university.edu" required />
+            </label>
+            <label>
+              密码
+              <input type="password" name="password" minlength="6" required />
+            </label>
+            <button type="submit">注册</button>
+            <p class="tip">注册成功后会自动创建学生档案。</p>
+          </form>
+
+          <form id="sign-in-form">
+            <h3>已有账号</h3>
+            <label>
+              邮箱
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              密码
+              <input type="password" name="password" required />
+            </label>
+            <button type="submit">登录</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Supabase Demo · 请在 <code>assets/config.js</code> 中配置自己的项目参数。</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/config.js"></script>
+    <script src="assets/auth.js"></script>
+  </body>
+</html>
+
+
