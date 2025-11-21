@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选课网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> 智慧选课平台</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="courses">课程列表</a></li>
+                    <li><a href="#" class="nav-link" data-page="my-courses">我的选课</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 课程列表页面 -->
+        <section id="courses-page" class="page active">
+            <div class="search-section">
+                <h2>探索课程</h2>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="搜索课程名称或教师...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="category-filter">学科分类</label>
+                        <select id="category-filter">
+                            <option value="">全部分类</option>
+                            <option value="computer">计算机科学</option>
+                            <option value="mathematics">数学</option>
+                            <option value="physics">物理</option>
+                            <option value="chemistry">化学</option>
+                            <option value="biology">生物学</option>
+                            <option value="economics">经济学</option>
+                            <option value="literature">文学</option>
+                            <option value="history">历史学</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="time-filter">上课时间</label>
+                        <select id="time-filter">
+                            <option value="">全部时间</option>
+                            <option value="morning">上午</option>
+                            <option value="afternoon">下午</option>
+                            <option value="evening">晚上</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="credit-filter">学分</label>
+                        <select id="credit-filter">
+                            <option value="">全部学分</option>
+                            <option value="1">1学分</option>
+                            <option value="2">2学分</option>
+                            <option value="3">3学分</option>
+                            <option value="4">4学分及以上</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-list" id="course-list">
+                <!-- 课程卡片将通过JavaScript动态生成 -->
+            </div>
+        </section>
+
+        <!-- 我的选课页面 -->
+        <section id="my-courses-page" class="page">
+            <div class="page-header">
+                <h2>我的选课</h2>
+                <div class="course-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-courses">0</span>
+                        <span class="stat-label">已选课程</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-credits">0</span>
+                        <span class="stat-label">总学分</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="my-course-list" id="my-course-list">
+                <!-- 已选课程将通过JavaScript动态生成 -->
+            </div>
+            
+            <div class="empty-state" id="empty-state">
+                <i class="fas fa-book-open"></i>
+                <p>您还没有选择任何课程</p>
+                <button class="btn primary" id="browse-courses">浏览课程</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 课程详情模态框 -->
+    <div id="course-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="course-detail">
+                <!-- 课程详情将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 选课成功提示 -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notification-text">操作成功</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 智慧选课平台. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

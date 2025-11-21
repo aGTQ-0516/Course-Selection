@@ -1,0 +1,24 @@
+{
+  "name": "course-selection-website",
+  "version": "1.0.0",
+  "description": "一个功能完整的在线选课系统",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "build": "echo 'Static build completed'",
+    "deploy": "netlify deploy --prod --dir=."
+  },
+  "keywords": [
+    "course-selection",
+    "education",
+    "website",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^13.1.0"
+  }
+}
